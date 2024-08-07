@@ -28,10 +28,14 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t fraguaangel/docker-graphql:v1.1 .
+        docker build -t fraguaangel/docker-graphql:latest .
+
           
     - name: Push Docker Image
       run: |
         docker push fraguaangel/docker-graphql:v1.1
+        docker push fraguaangel/docker-graphql:latest
+
     
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
