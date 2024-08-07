@@ -43,7 +43,7 @@ jobs:
     - name: Push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version  }}
-      run: 
+      run: |
         docker push fraguaangel/docker-graphql:$NEW_VERSION
         docker push fraguaangel/docker-graphql:latest 
     
